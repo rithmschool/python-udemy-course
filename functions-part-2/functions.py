@@ -1,19 +1,22 @@
 def calculate(**kwargs):
     first = kwargs.get('first', 0)
     second = kwargs.get('second', 0)
+    is_float = kwargs.get('make_float', False)
+    message = kwargs.get('message','The result is')
+    
     operation_lookup = {
         'add': first + second,
         'subtract': first - second,
+        'multiply': first * second,
         'divide': first / second,
-        'multiply': first / second
     }
-    is_float = kwargs.get('make_float', False)
+    
     operation_value = operation_lookup[kwargs.get('operation', '')]
+    
     if is_float:
-        final = "{} {}".format(kwargs.get('message','The result is'), float(operation_value))
-    else:
-        final = "{} {}".format(kwargs.get('message','The result is'), int(operation_value))
-    return final
+        return  "{} {}".format(message, float(operation_value))
+    return "{} {}".format(message, int(operation_value))
+
 
 def sum_even_values(*args):
     return sum(arg for arg in args if arg % 2 == 0) or 0
@@ -39,9 +42,8 @@ def running_average():
     return inner
 
 def letter_counter(s):
-    letter_counter.val = s
     def inner(char):
-        return len(list(c.lower() for c in letter_counter.val.lower() if c == char))
+        return len(list(c.lower() for c in s.lower() if c == char))
     return inner
 
 def once(fn):
