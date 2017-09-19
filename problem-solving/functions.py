@@ -1,8 +1,8 @@
 def reverse_string(str):
-  s = ''
-  for i, char in enumerate(str[::-1]):
-    s += char
-  return s
+    s = ''
+    for i, char in enumerate(str[::-1]):
+        s += char
+    return s
 
 def list_check(vals):
   return all(type(l) == list for l in vals)
@@ -11,18 +11,18 @@ def remove_every_other(lst):
     return [val for i,val in enumerate(lst) if i % 2 == 0]
 
 def sum_pairs(ints, s):
-  already_visited = set()
-  for i in ints:
+    already_visited = set()
+    for i in ints:
       difference = s - i
       if difference in already_visited:
           return [difference, i]
       already_visited.add(i)
-  return []
+    return []
 
 
 def vowel_count(string):
-  lower_s = string.lower()
-  return {letter: lower_s.count(letter) for letter in string if letter in "aeiou"}
+    lower_s = string.lower()
+    return {letter: lower_s.count(letter) for letter in string if letter in "aeiou"}
 
 def upper_first(s):
     return s[0].upper() + s[1:]
@@ -47,33 +47,33 @@ def includes(item,val,start=None):
     return val in item[start:]
 
 def repeat(string, num):
-  if(num == 0):
-      return ''
-  i = 0
-  newStr = ''
-  while(i < num):
-      newStr += string
-      i += 1
-  return newStr
+    if(num == 0):
+        return ''
+    i = 0
+    newStr = ''
+    while(i < num):
+        newStr += string
+        i += 1
+    return newStr
 
 def truncate(string, n):
-  if (n < 3):
-      return "Truncation must be at least 3 characters."
-  if (n >len(string) + 2):
-      return string
+    if (n < 3):
+        return "Truncation must be at least 3 characters."
+    if (n >len(string) + 2):
+        return string
 
-  return string[:n - 3] + "..."
+    return string[:n - 3] + "..."
 
 def two_list_dictionary(keys, values):
-  collection = {}
+    collection = {}
 
-  for idx, val in enumerate(keys):
-    if idx < len(values):
-        collection[keys[idx]] = values[idx]
-    else:
-        collection[keys[idx]] = None
+    for idx, val in enumerate(keys):
+        if idx < len(values):
+            collection[keys[idx]] = values[idx]
+        else:
+            collection[keys[idx]] = None
 
-  return collection
+    return collection
 
 
 def range_in_list(lst, start=0, end=None):
@@ -92,9 +92,9 @@ def same_frequency(num1,num2):
     return True
 
 def nth(arr, idx):
-  if idx >= 0:
-    return arr[idx]
-  return arr[idx + len(arr)]
+    if idx >= 0:
+        return arr[idx]
+    return arr[idx + len(arr)]
 
 def find_the_duplicate(arr):
     counter = {}
@@ -140,24 +140,24 @@ def find_greater_numbers(arr):
     return count;
 
 def two_oldest_ages(ages):
-  return sorted(ages)[-2:]
+    return sorted(ages)[-2:]
 
 def is_odd_string(string):
     total = sum((ord(c) - 96) for c in string.lower()) or 0
     return total % 2 == 1
 
 def validParentheses(parens):
-  count = 0
-  i = 0
-  while i < len(parens):
-    if (parens[i] == '('):
-        count += 1
-    if (parens[i] == ')'):
-        count -= 1
-    if (count < 0):
-        return False
+    count = 0
+    i = 0
+    while i < len(parens):
+        if (parens[i] == '('):
+            count += 1
+        if (parens[i] == ')'):
+            count -= 1
+        if (count < 0):
+            return False
     i += 1
-  return count == 0
+    return count == 0
 
 def three_odd_numbers(arr):
     i = 0
