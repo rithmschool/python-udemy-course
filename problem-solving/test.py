@@ -44,11 +44,11 @@ class Evaluate(unittest.TestCase):
 
 
     def test_find_factors(self):
-        self.assertEqual(functions.findFactors(10), [1,2,5,10 ])
-        self.assertEqual(functions.findFactors(11), [1,11])
-        self.assertEqual(functions.findFactors(111), [1,3,37,111 ])
-        self.assertEqual(functions.findFactors(321421), [1,293,1097,321421 ])
-        self.assertEqual(functions.findFactors(412146), [1,2,3,6,7,9,14,18,21,42,63,126,3271,6542,9813,19626,22897,29439,45794,58878,68691,137382,206073,412146])
+        self.assertEqual(functions.find_factors(10), [1,2,5,10 ])
+        self.assertEqual(functions.find_factors(11), [1,11])
+        self.assertEqual(functions.find_factors(111), [1,3,37,111 ])
+        self.assertEqual(functions.find_factors(321421), [1,293,1097,321421 ])
+        self.assertEqual(functions.find_factors(412146), [1,2,3,6,7,9,14,18,21,42,63,126,3271,6542,9813,19626,22897,29439,45794,58878,68691,137382,206073,412146])
 
 
     def test_includes(self):
@@ -122,7 +122,7 @@ class Evaluate(unittest.TestCase):
            [ 3, 4 ]
          ];
 
-        self.assertEqual(functions.sumUpDiagonals(list1), 10)
+        self.assertEqual(functions.sum_up_diagonals(list1), 10)
 
         list2 = [
            [ 1, 2, 3 ],
@@ -130,7 +130,7 @@ class Evaluate(unittest.TestCase):
            [ 7, 8, 9 ],
          ];
 
-        self.assertEqual(functions.sumUpDiagonals(list2), 30)
+        self.assertEqual(functions.sum_up_diagonals(list2), 30)
 
         list3 = [
           [ 4, 1, 0 ],
@@ -138,7 +138,7 @@ class Evaluate(unittest.TestCase):
           [ 0, 0, 9]
         ];
 
-        self.assertEqual(functions.sumUpDiagonals(list3), 11)
+        self.assertEqual(functions.sum_up_diagonals(list3), 11)
 
         list4 = [
            [ 1, 2, 3, 4 ],
@@ -147,7 +147,7 @@ class Evaluate(unittest.TestCase):
            [ 13, 14, 15, 16 ]
          ];
 
-        self.assertEqual(functions.sumUpDiagonals(list4), 68)
+        self.assertEqual(functions.sum_up_diagonals(list4), 68)
 
 
     def test_find_twins(self):
@@ -186,13 +186,13 @@ class Evaluate(unittest.TestCase):
 
 
     def test_valid_parenthesis(self):
-        self.assertEqual(functions.validParentheses("()"), True)
-        self.assertEqual(functions.validParentheses(")(()))"), False)
-        self.assertEqual(functions.validParentheses("("), False)
-        self.assertEqual(functions.validParentheses("(())((()())())"), True)
-        self.assertEqual(functions.validParentheses('))(('), False)
-        self.assertEqual(functions.validParentheses('())('), False)
-        self.assertEqual(functions.validParentheses('()()()()())()('), False)
+        self.assertEqual(functions.valid_parentheses("()"), True)
+        self.assertEqual(functions.valid_parentheses(")(()))"), False)
+        self.assertEqual(functions.valid_parentheses("("), False)
+        self.assertEqual(functions.valid_parentheses("(())((()())())"), True)
+        self.assertEqual(functions.valid_parentheses('))(('), False)
+        self.assertEqual(functions.valid_parentheses('())('), False)
+        self.assertEqual(functions.valid_parentheses('()()()()())()('), False)
 
 
     def test_three_odd_numbers(self):
@@ -208,10 +208,6 @@ class Evaluate(unittest.TestCase):
         self.assertEqual(functions.reverse_vowels("Reverse Vowels In A String"), "RivArsI Vewols en e Streng")
         self.assertEqual(functions.reverse_vowels("aeiou"), "uoiea")
         self.assertEqual(functions.reverse_vowels("why try, shy fly?"), "why try, shy fly?")
-
-
-
-
 
 if __name__ == '__main__':
     unittest.main()

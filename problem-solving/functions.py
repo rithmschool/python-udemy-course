@@ -1,7 +1,9 @@
-def reverse_string(str):
+def reverse_string(string):
     s = ''
-    for i, char in enumerate(str[::-1]):
-        s += char
+    i = len(string)-1
+    while(i >= 0):
+        s += string[i]
+        i -= 1
     return s
 
 def list_check(vals):
@@ -30,7 +32,7 @@ def upper_first(s):
 def titleize(string):
     return ' '.join(s[0].upper() + s[1:] for s in string.split(' '))
 
-def findFactors(num):
+def find_factors(num):
     factors = []
     i = 1
     while(i <= num):
@@ -107,7 +109,7 @@ def find_the_duplicate(arr):
         if counter[key] > 1:
             return int(key)
 
-def sumUpDiagonals(arr):
+def sum_up_diagonals(arr):
     total = 0
 
     for i,val in enumerate(arr):
@@ -146,7 +148,7 @@ def is_odd_string(string):
     total = sum((ord(c) - 96) for c in string.lower()) or 0
     return total % 2 == 1
 
-def validParentheses(parens):
+def valid_parentheses(parens):
     count = 0
     i = 0
     while i < len(parens):
@@ -156,7 +158,7 @@ def validParentheses(parens):
             count -= 1
         if (count < 0):
             return False
-    i += 1
+        i += 1
     return count == 0
 
 def three_odd_numbers(arr):
