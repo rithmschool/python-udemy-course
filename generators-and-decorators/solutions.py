@@ -1,6 +1,5 @@
 from functools import wraps
 
-# Generators Exercise
 def accumulate(end):
     total = 0
     for num in range(1, end+1):
@@ -13,7 +12,6 @@ def fib(n):
         yield a
         a, b = b, a + b
 
-# Decorators Exercises
 def double_result(fn):
     @wraps(fn)
     def inner(*args, **kwargs):
