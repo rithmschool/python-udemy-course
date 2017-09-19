@@ -36,7 +36,7 @@ def find_factors(num):
     factors = []
     i = 1
     while(i <= num):
-        if (num % i == 0):
+        if num % i == 0:
             factors.append(i)
         i += 1
     return factors
@@ -59,9 +59,9 @@ def repeat(string, num):
     return newStr
 
 def truncate(string, n):
-    if (n < 3):
+    if n < 3:
         return "Truncation must be at least 3 characters."
-    if (n >len(string) + 2):
+    if n >len(string) + 2:
         return string
 
     return string[:n - 3] + "..."
@@ -93,14 +93,14 @@ def same_frequency(num1,num2):
             return False
     return True
 
-def nth(arr, idx):
+def nth(lst, idx):
     if idx >= 0:
-        return arr[idx]
-    return arr[idx + len(arr)]
+        return lst[idx]
+    return lst[idx + len(lst)]
 
-def find_the_duplicate(arr):
+def find_the_duplicate(lst):
     counter = {}
-    for val in arr:
+    for val in lst:
         if val in counter:
             counter[val] += 1
         else:
@@ -109,12 +109,12 @@ def find_the_duplicate(arr):
         if counter[key] > 1:
             return int(key)
 
-def sum_up_diagonals(arr):
+def sum_up_diagonals(lst):
     total = 0
 
-    for i,val in enumerate(arr):
-        total += arr[i][i]
-        total += arr[i][-1-i]
+    for i,val in enumerate(lst):
+        total += lst[i][i]
+        total += lst[i][-1-i]
     return total
 
 def find_twins(lst):
@@ -122,19 +122,18 @@ def find_twins(lst):
     for key in freq.keys():
         if freq[key] > 1:
             return key
-    return None
 
 def min_max_key_in_dictionary(d):
     keys = d.keys()
     return [min(keys), max(keys)]
 
-def find_greater_numbers(arr):
+def find_greater_numbers(lst):
     count = 0
     i = 0
     j = 1
-    while i < len(arr):
-        while j < len(arr):
-            if arr[j] > arr[i]:
+    while i < len(lst):
+        while j < len(lst):
+            if lst[j] > lst[i]:
                 count += 1
             j+=1
         j = i+1
@@ -152,22 +151,22 @@ def valid_parentheses(parens):
     count = 0
     i = 0
     while i < len(parens):
-        if (parens[i] == '('):
+        if parens[i] == '(':
             count += 1
-        if (parens[i] == ')'):
+        if parens[i] == ')':
             count -= 1
-        if (count < 0):
+        if count < 0:
             return False
         i += 1
     return count == 0
 
-def three_odd_numbers(arr):
+def three_odd_numbers(lst):
     i = 0
-    while(i < (len(arr) -2)):
+    while(i < (len(lst) -2)):
         total = 0
         j = i
         while(j <= i+2):
-            total += arr[j]
+            total += lst[j]
             j+=1
 
         if (j-i) % 3 == 0 and total % 2 != 0:
