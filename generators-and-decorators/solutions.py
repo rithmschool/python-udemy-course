@@ -1,10 +1,12 @@
 from functools import wraps
 
+
 def accumulate(end):
     total = 0
-    for num in range(1, end+1):
+    for num in range(1, end + 1):
         total += num
         yield total
+
 
 def fib(n):
     a, b = 0, 1
@@ -12,11 +14,13 @@ def fib(n):
         yield a
         a, b = b, a + b
 
+
 def double_result(fn):
     @wraps(fn)
     def inner(*args, **kwargs):
         return fn(*args, **kwargs) * 2
     return inner
+
 
 def only_ints(fn):
     @wraps(fn)
@@ -26,6 +30,7 @@ def only_ints(fn):
         return fn(*args, **kwargs)
     return inner
 
+
 def only_even_parameters(fn):
     @wraps(fn)
     def inner(*args, **kwargs):
@@ -34,6 +39,7 @@ def only_even_parameters(fn):
         return fn(*args, **kwargs)
     return inner
 
+
 def authorize_user(fn):
     @wraps(fn)
     def inner(*args, **kwargs):
@@ -41,4 +47,3 @@ def authorize_user(fn):
             return fn(*args, **kwargs)
         return 'Not Authorized'
     return inner
-
