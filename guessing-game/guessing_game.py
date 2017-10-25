@@ -1,9 +1,9 @@
 import random
 
-randomNumber = random.randint(0, 9) + 1  # numbers 1 - 10
+random_number = random.randint(0, 9) + 1  # numbers 1 - 10
 
 # handle user guesses
 #   if they guess correct, tell them they won
-#   otherwise keep guessing
+#     otherwise tell them if they are too high or too low
 
-# BONUS - let player play again if they want
+# BONUS - let player play again if they want!
