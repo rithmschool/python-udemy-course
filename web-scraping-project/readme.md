@@ -11,8 +11,8 @@ In this project, you'll be building a quotes guessing game. When run, your progr
 3. Next, display the quote to the user and ask who said it. The olayer will have four guesses remaining.
 4. After each incorrect guess, the number of guesses remaining will decrement. If the player gets to zero guesses without identifying the author, the player loses and the game ends. If the player correctly identifies the author, the player wins!
 5. After every incorrect guess, the player receives a hint about the author. 
-    a. For the first hint, make another request to the author's bio page (this is why we originally scrape this data), and tell the player the author's birth date and location.
-    b. The next two hints are up to you! Some ideas: the first letter of the author's first name, the first letter of the author's last name, the number of letters in one of the names, etc.
+    1. For the first hint, make another request to the author's bio page (this is why we originally scrape this data), and tell the player the author's birth date and location.
+    2. The next two hints are up to you! Some ideas: the first letter of the author's first name, the first letter of the author's last name, the number of letters in one of the names, etc.
 6. When the game is over, ask the player if they want to play again. If yes, restart the game with a new quote. If no, the program is complete.
 
 Good luck!
