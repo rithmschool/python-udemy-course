@@ -55,9 +55,10 @@ class Evaluate(unittest.TestCase):
         def say_hi():
             return "hi"
 
-        say_hi()
+        s = say_hi()
         sleep_mock.assert_called_with("Waiting 3s before running say_hi")
         print_mock.assert_called_with(3)
+        self.assertEqual(s, "hi")
 
 if __name__ == '__main__':
     unittest.main()
