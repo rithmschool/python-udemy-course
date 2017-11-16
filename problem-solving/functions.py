@@ -127,13 +127,6 @@ def sum_up_diagonals(lst):
     return total
 
 
-def find_twins(lst):
-    freq = {val: lst.count(val) for val in lst}
-    for key in freq.keys():
-        if freq[key] > 1:
-            return key
-
-
 def min_max_key_in_dictionary(d):
     keys = d.keys()
     return [min(keys), max(keys)]
