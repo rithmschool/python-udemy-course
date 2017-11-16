@@ -33,11 +33,6 @@ class Evaluate(unittest.TestCase):
         self.assertEqual(functions.vowel_count('Elie'), {'e': 2, 'i': 1})
         self.assertEqual(functions.vowel_count('Colt'), {'o': 1})
 
-    def test_upper_first(self):
-        self.assertEqual(functions.upper_first('fun times'), "Fun times")
-        self.assertEqual(functions.upper_first('fun TIMES'), "Fun TIMES")
-        self.assertEqual(functions.upper_first('hello worlD'), "Hello worlD")
-
     def test_titleize(self):
         self.assertEqual(functions.titleize(
             'this is awesome'), "This Is Awesome")
