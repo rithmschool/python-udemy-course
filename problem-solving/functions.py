@@ -66,10 +66,6 @@ def sum_diagonals():
     pass
 
 
-def find_twins():
-    pass
-
-
 def min_max_key_in_dictionary():
     pass
 
