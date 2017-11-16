@@ -103,9 +103,7 @@ def same_frequency(num1, num2):
 
 
 def nth(lst, idx):
-    if idx >= 0:
-        return lst[idx]
-    return lst[idx + len(lst)]
+    return lst[idx]
 
 
 def find_the_duplicate(lst):
