@@ -30,10 +30,6 @@ def vowel_count(string):
     return {letter: lower_s.count(letter) for letter in string if letter in "aeiou"}
 
 
-def upper_first(s):
-    return s[0].upper() + s[1:]
-
-
 def titleize(string):
     return ' '.join(s[0].upper() + s[1:] for s in string.split(' '))
 
