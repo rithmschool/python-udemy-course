@@ -148,13 +148,6 @@ class Evaluate(unittest.TestCase):
 
         self.assertEqual(functions.sum_up_diagonals(list4), 68)
 
-    def test_find_twins(self):
-        self.assertEqual(functions.find_twins([4, 1, 6, 1, 5]), 1)
-        self.assertEqual(functions.find_twins([2, 3, 6, 34, 7, 8, 2]), 2)
-        self.assertEqual(functions.find_twins([3, 6, 9, 2, 4, 3, 1, 0]), 3)
-        self.assertEqual(functions.find_twins([]), None)
-        self.assertEqual(functions.find_twins([3, 1, 4, 2, 5]), None)
-
     def test_min_max_key_in_dictionary(self):
         self.assertEqual(functions.min_max_key_in_dictionary(
             {2: 'a', 7: 'b', 1: 'c', 10: 'd', 4: 'e'}), [1, 10])
