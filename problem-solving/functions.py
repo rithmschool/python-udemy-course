@@ -85,7 +85,8 @@ def two_list_dictionary(keys, values):
 
 
 def range_in_list(lst, start=0, end=None):
-    end = end or lst[-1]
+    if end is None:
+      end = len(lst)
     return sum(lst[start:end + 1])
 
 
