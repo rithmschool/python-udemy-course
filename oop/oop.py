@@ -34,7 +34,7 @@ class Deck:
         return self.cards[-actual:]
 
     def shuffle(self):
-        if len(self.cards) < 52:
+        if self.count() < 52:
             raise ValueError("Only full decks can be shuffled")
         shuffle(self.cards)
         return self
