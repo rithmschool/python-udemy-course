@@ -31,7 +31,7 @@ class Deck:
         if count == 0:
             raise ValueError("All cards have been dealt")
 
-        return self.cards[-actual:]
+        return self.cards[-actual:] if actual > 1 else self.cards.pop()
 
     def shuffle(self):
         if self.count() < 52:
