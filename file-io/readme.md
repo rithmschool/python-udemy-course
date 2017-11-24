@@ -16,7 +16,7 @@ For this exercise, you'll be working with a file called `users.csv`. Each row of
 
 Implement the following functions:
 
-`print_user`: prints out all of the first and last names in the `users.csv` file
+`print_users`: prints out all of the first and last names in the `users.csv` file.
 
 `add_user`: Takes in a first name and a last name and adds a new user to the `users.csv` file.
 
